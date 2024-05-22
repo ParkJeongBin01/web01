@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function foodname() {
+        let food = document.getElementsByName('food');
+        let result = '';
+        for (let i = 0; i < food.length; i++) {
+          if (food[i].checked) {
+            result += food[i].value;
+          }
+        }
+        console.log(result);
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <div>
+        좋아하는 음식은?
+        <label><input type="checkbox" name="food" value="라면" /> 라면</label>
+        <label><input type="checkbox" name="food" value="만두" /> 만두</label>
+        <label><input type="checkbox" name="food" value="불고기" /> 불고기</label>
+        <input id="btn" type="button" value="전송" onclick="foodname()" />
+      </div>
+    </form>
+  </body>
+</html>

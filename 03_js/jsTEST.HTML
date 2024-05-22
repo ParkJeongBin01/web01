@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traditional Event Default Event</title>
+    <script>
+      window.onload = function () {
+        console.log(selectELs);
+        let button = document.getElementById('btn');
+        button.onclick = function () {
+          const query = 'input[name="food"]:checked';
+          const selectELs = document.querySelectorAll(query);
+          let result = '';
+          selectELs.forEach((el) => {
+            result += el.value + ' ';
+          });
+          console.log(result);
+        };
+      };
+    </script>
+  </head>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        overflow: hidden;
+      }
+      li {
+        /* 블릿 사라지게 하기 */
+        list-style: none;
+        /* 수평 정렬 */
+        float: left;
+        /* 여백 */
+        padding: 15px;
+      }
+      /* 첫 번째 박스를 둥글게 */
+      li:first-child {
+        /* radius반지름 */
+        border-radius: 10px 0 0 10px;
+      }
+      /* 마지막 박스를 둥글게 */
+      li:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+      /* 짝수 */
+      li:nth-child(2n) {
+        background-color: #ff0003;
+      }
+      /* 홀수 */
+      li:nth-child(2n + 1) {
+        background-color: #800000;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>첫 번째</li>
+      <li>두 번째</li>
+      <li>세 번째</li>
+      <li>네 번째</li>
+      <li>다섯 번째</li>
+      <li>여섯 번째</li>
+      <li>일곱 번째</li>
+    </ul>
+  </body>
+</html>
